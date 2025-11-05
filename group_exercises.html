@@ -21,7 +21,7 @@
       <nav aria-label="Primary">
         <a href="index.html">Home</a>
         <a href="syllabus.html">Syllabus</a>
-        <a href="group_exercises.html" class="active">Group Exercises</a>
+        <a href="group_exercises.html" class="active" aria-current="page">Group Exercises</a>
         <a href="resources.html">Resources</a>
       </nav>
     </div>
@@ -32,69 +32,144 @@
     <section class="section-card">
       <h1>Group Exercises</h1>
       <p>
-        These weekly exercises are designed to help you apply core AI concepts in small teams.
-        Each activity builds intuition about how AI systems learn, generate, and reason—while
-        encouraging reflection on their societal impact.
+        These weekly activities help you apply core AI concepts in small teams. Each exercise builds
+        intuition about how AI systems learn, generate, and reason — and encourages reflection on their
+        impact in the real world. Unless noted otherwise, submit the brief notes requested in each exercise.
       </p>
     </section>
 
-    <section class="section-card">
-      <h2>Exercise List</h2>
-      <table>
-        <thead>
-          <tr>
-            <th style="width: 80px;">Week</th>
-            <th style="width: 260px;">Title</th>
-            <th>Description</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>1</td>
-            <td>What Makes a Machine “Intelligent”?</td>
-            <td>In small groups, brainstorm what “intelligence” means for humans and machines. Compare your ideas with early AI definitions and discuss examples.</td>
-          </tr>
-          <tr>
-            <td>2</td>
-            <td>Exploring Data</td>
-            <td>Analyze a small dataset using visualization tools (e.g., Google Sheets or ChatGPT’s table analysis). Identify trends and anomalies.</td>
-          </tr>
-          <tr>
-            <td>3</td>
-            <td>Machine Learning in Action</td>
-            <td>Use a simple web-based ML demo to fit a curve or classify points. Reflect on what the model learned and what it didn’t.</td>
-          </tr>
-          <tr>
-            <td>4</td>
-            <td>Neural Networks, Simplified</td>
-            <td>Work through a visual neural network simulation (like TensorFlow Playground). Adjust parameters and observe how performance changes.</td>
-          </tr>
-          <tr>
-            <td>5</td>
-            <td>Prompting with Generative AI</td>
-            <td>Experiment with LLMs to create short creative or analytical outputs. Discuss how prompt structure influences the result.</td>
-          </tr>
-          <tr>
-            <td>8</td>
-            <td>Bias and Fairness in AI</td>
-            <td>Review examples of biased model outputs. Discuss possible sources of bias in data, design, or deployment.</td>
-          </tr>
-          <tr>
-            <td>10</td>
-            <td>AI in the Real World</td>
-            <td>Choose a field (healthcare, art, business, etc.) and outline one positive and one risky use of AI. Present your group’s findings.</td>
-          </tr>
-        </tbody>
-      </table>
+    <!-- Lecture 1 -->
+    <section class="section-card" id="lec1">
+      <h2>Lecture 1 (no response required): Reverse Turing Test</h2>
+      <ol>
+        <li>Form groups of 3 and spend 5 minutes telling each other two things about yourself. Pick a letter: A, B, or C.</li>
+        <li>
+          Student A asks a question. Student B writes a two-sentence response on an index card.
+          In parallel, Student C asks an LLM (e.g., ChatGPT or Claude) to role-play Student B and answers the same question.
+          Student C writes the model’s two-sentence response. Both responses are anonymized and given to Student A.
+        </li>
+        <li>Student A guesses which response is from Student B. Student B’s goal is to mimic the LLM and fool A.</li>
+        <li>If time permits, rotate roles so each student plays A, B, and C.</li>
+        <li>Reflect on strategies that worked or didn’t for both Students A and C.</li>
+      </ol>
+      <p class="muted">Only written note (if requested): your role — A, B, or C.</p>
+    </section>
+
+    <!-- Lecture 2 -->
+    <section class="section-card" id="lec2">
+      <h2>Lecture 2: Train a Classifier</h2>
+      <p>
+        Use <a href="https://teachablemachine.withgoogle.com/train/image" target="_blank" rel="noopener noreferrer">Teachable Machine’s image classifier</a>.
+      </p>
+      <ol>
+        <li>Form groups of 2 students.</li>
+        <li>Train a model to classify images of two objects. Record accuracy for each task/class.</li>
+        <li>Degrade its performance by ~20% (e.g., rotate or partially block the objects).</li>
+        <li>Retrain the model more robustly (e.g., include more orientations and background variation during training).</li>
+        <li>
+          Reflection: Did inadvertent human faces confuse the model? What helped robustness more — more data or more variation?
+        </li>
+      </ol>
+    </section>
+
+    <!-- Lecture 3 -->
+    <section class="section-card" id="lec3">
+      <h2>Lecture 3: AI Buzzwords</h2>
+      <p>We played “What’s that AI buzzword?” Select <strong>three</strong> terms below and give examples illustrating each idea.</p>
+      <ul>
+        <li><strong>Classification:</strong> Teaching a model to put things into categories (e.g., spam vs. not spam).</li>
+        <li><strong>Supervised learning:</strong> Training with labeled examples where the right answers are already known (e.g., images labeled Apple vs. Strawberry).</li>
+        <li><strong>Overfitting:</strong> When a model memorizes training data and performs poorly on new data due to irrelevant learned features.</li>
+        <li><strong>Unsupervised learning:</strong> Finding hidden patterns in data without labels (e.g., grouping similar songs).</li>
+        <li><strong>Test data:</strong> A separate set for checking generalization (e.g., predicting rent for a new apartment).</li>
+        <li><strong>Prediction:</strong> The model’s output on unseen inputs (e.g., the rent estimate for a new apartment).</li>
+        <li><strong>Neural network:</strong> Interconnected nodes inspired by the brain that learn patterns from data; input layer ingests data, output layer produces results.</li>
+        <li><strong>Large Language Model (LLM):</strong> Trained on huge text corpora to generate/understand language (e.g., ChatGPT, Claude).</li>
+        <li><strong>Deep learning:</strong> Machine learning with many neural layers capturing complex patterns for prediction/classification.</li>
+        <li><strong>Reinforcement learning:</strong> Training via trial and error with rewards/penalties; reinforcement learning with human feedback (RLHF) fine-tunes LLMs.</li>
+        <li><strong>Features / Variables:</strong> Measurable inputs used by models (e.g., square footage, bedrooms).</li>
+      </ul>
+    </section>
+
+    <!-- Lecture 4 -->
+    <section class="section-card" id="lec4">
+      <h2>Lecture 4: You Are the LLM</h2>
+      <p>At each table, complete the prompt: <em>“In the future people will…”</em></p>
+      <ol>
+        <li>One person starts by adding the next word. Go around the table adding one word (or punctuation) at a time until time is called.</li>
+        <li>
+          Use words from this vocabulary plus any articles (a, an, the), prepositions (of, in, at, to, with…), or punctuation (, ; .):<br>
+          <code>
+            live, then, travel, explore, and, so, create, build, learn, teach, share, connect, change,
+            dream, imagine, fly, work, together, if, everywhere, moon, Mars, Earth, ocean, because,
+            faster, better, happily, safely, freely, while
+          </code>
+        </li>
+      </ol>
+      <p><strong>Discuss:</strong> How different were the responses at different tables, and why? In what ways did your prompt completion differ from modern LLMs?</p>
+    </section>
+
+    <!-- Lecture 5 -->
+    <section class="section-card" id="lec5">
+      <h2>Lecture 5: Word Embeddings for Real</h2>
+      <p>
+        Use this Colab notebook (by Prof. Chris Callison-Burch; added visualization content by Ha):
+        <a href="https://colab.research.google.com/drive/1tYjxQC8yQZBfdeOQfb4gpf9Uc4bMXQv8?usp=sharing" target="_blank" rel="noopener noreferrer">Open the notebook</a>.
+      </p>
+      <ol>
+        <li>Click the link (requires a Google account). It opens in a new browser tab.</li>
+        <li>Run each cell. If you have trouble, let us know.</li>
+        <li>Vary the questions and discuss the responses/visualizations.</li>
+      </ol>
+      <p class="muted">Submission: mark <em>Yes</em> for attendance only.</p>
+    </section>
+
+    <!-- Lecture 6 -->
+    <section class="section-card" id="lec6">
+      <h2>Lecture 6: Good Prompting</h2>
+      <p>
+        Create prompts that help with your studies, professional, or personal life.
+        For inspiration, see these examples:
+        <a href="https://chatgpt.com/use-cases/students" target="_blank" rel="noopener noreferrer">Prompt ideas for students</a>.
+      </p>
+      <ol>
+        <li>Explore the examples; then craft your own prompts.</li>
+        <li>Try at least one prompt (optionally include the response).</li>
+      </ol>
+    </section>
+
+    <!-- Lecture 7 -->
+    <section class="section-card" id="lec7">
+      <h2>Lecture 7 (no response needed): Make Your Own Loss Function</h2>
+      <p>
+        We discussed training neural nets to reduce a <em>loss function</em> via gradient descent until performance is “good enough.”
+        With your group, choose a real-life goal and define a loss function that would help you achieve that goal.
+      </p>
+      <p class="muted">Example: To forecast tomorrow’s temperature T, minimize <code>(predicted T − measured T)<sup>2</sup></code>.</p>
+    </section>
+
+    <!-- Lecture 10 -->
+    <section class="section-card" id="lec10">
+      <h2>Lecture 10: What Can You Do with AI?</h2>
+      <p>
+        Build something with AI for a task you genuinely know how to do, aimed at a real user (friend, younger student, teammate).
+        Go beyond text — ask for drawings, videos, or demos where appropriate.
+      </p>
+      <p><strong>Examples:</strong> a favorite recipe; coaching tips (tennis, photography composition, pottery); a still-life sketch; relationship advice; a day itinerary for a visiting friend.</p>
+      <ol>
+        <li><strong>Plan (10 min):</strong> Map a strategy to maximize AI — background info to supply, prompt sequence, external tools.</li>
+        <li><strong>Discuss (15 min):</strong> Share your plan with the group and get feedback.</li>
+        <li><strong>Build (15 min):</strong> Try with a minimal prompt; then iterate with all the ingredients you think will produce the best outcome.</li>
+      </ol>
     </section>
 
     <section class="section-card">
       <h2>Guidelines</h2>
       <ul>
-        <li>Groups will typically consist of 3–5 students.</li>
-        <li>Participation in exercises counts toward your attendance and engagement grade.</li>
+        <li>Groups typically consist of 3–5 students (unless otherwise specified).</li>
+        <li>Participation counts toward attendance and engagement.</li>
         <li>Be prepared to share a short summary of your discussion or findings at the end of class.</li>
-        <li>When using AI tools, cite them clearly in your submissions.</li>
+        <li>When using AI tools, cite them clearly in any submissions.</li>
       </ul>
     </section>
   </main>
